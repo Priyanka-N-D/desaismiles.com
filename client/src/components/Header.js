@@ -8,9 +8,7 @@ export default function Header({ user, logout }) {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
-          <Link to="/appointment">Book Appointment</Link>
-        </li>
+
         {!user && (
           <li>
             <Link to="/login">Login</Link>
@@ -31,6 +29,28 @@ export default function Header({ user, logout }) {
             <button onClick={logout}>Logout</button>
           </li>
         )}
+        <li>
+          <Link
+            to="/appointment"
+            className="cta-nav-btn"
+            style={{
+              background: "linear-gradient(90deg, #7f53ac 0%, #647dee 100%)",
+              color: "#fff",
+              padding: "8px 18px",
+              borderRadius: "8px",
+              fontWeight: "bold",
+              textDecoration: "none",
+              transition: "transform 0.2s",
+              marginLeft: "8px",
+            }}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.08)")
+            }
+            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+          >
+            Book Appointment
+          </Link>
+        </li>
       </ul>
     </nav>
   );

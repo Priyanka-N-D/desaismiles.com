@@ -38,10 +38,54 @@ export default function Home({ setActivePage }) {
     <div className="container">
       <div className="hero">
         <h1>Welcome to Desai Dental Clinic</h1>
+
         <p>
-          Expert care with Dr. Rakesh Desai, Implant Specialist, Indi,
-          Vijayapura, Karnataka
+          Dr. Rakesh Desai is a renowned Implant Specialist based in Indi,
+          Vijayapura, Karnataka. He completed his BDS from Rajiv Gandhi
+          University of Health Sciences, Bangalore, and pursued his MDS in
+          Implantology at SDM College of Dental Sciences, Shimoga. Dr. Desai
+          specializes in dental implants, cosmetic dentistry, and advanced
+          restorative procedures. He is committed to providing expert care using
+          the latest technology in a patient-friendly environment.
+          <br />
+          <strong className="contact">Contact:</strong> +91-9876543210
+          &nbsp;|&nbsp; <strong className="contact">Email:</strong>{" "}
+          dr.rakesh@desaidental.com
         </p>
+
+        <div
+          style={{
+            display: "inline-flex",
+            justifyContent: "space-evenly",
+            gap: "32px",
+            margin: "24px 0",
+          }}
+        >
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="/happyPatient.jpg"
+              alt="Happy Patient"
+              style={{
+                borderRadius: "8px",
+                width: "-webkit-fill-available",
+                height: "auto",
+              }}
+            />
+            <p>Our patients love us!</p>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <img
+              src="/clinic.jpg"
+              alt="Dental Clinic"
+              style={{
+                borderRadius: "8px",
+                width: "-webkit-fill-available",
+                height: "auto",
+              }}
+            />
+            <p>Visit our state-of-the-art clinic</p>
+          </div>
+        </div>
         <button className="cta-button">
           <Link
             to="/appointment"
