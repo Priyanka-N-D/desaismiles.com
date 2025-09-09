@@ -1,0 +1,10 @@
+{
+  "name": "my-project",
+  "private": true,
+  "scripts": {
+    "start": "concurrently -n backend,frontend -c yellow,cyan \"npm run dev --prefix backend\" \"npm start --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
