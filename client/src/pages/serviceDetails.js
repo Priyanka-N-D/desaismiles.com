@@ -64,41 +64,157 @@ export default function ServiceDetails() {
 
   const service = services[id];
 
-  if (!service) {
-    return (
-      <div className="container">
-        <h2>Service Not Found</h2>
-        <button className="btn" onClick={() => navigate("/")}>
-          ← Back to Home
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <div className="container">
-      <h2>
+    <div
+      className="container"
+      style={{
+        maxWidth: "-webkit-fill-available",
+        margin: "0 auto",
+        padding: "10px 0",
+      }}
+    >
+      <h2
+        style={{
+          textAlign: "center",
+          fontSize: "2.3rem",
+          fontWeight: "900",
+          color: "#fff",
+
+          padding: "18px 0",
+          marginBottom: "28px",
+          letterSpacing: "2px",
+          fontFamily: "'Montserrat', 'Segoe UI', Arial, sans-serif",
+        }}
+      >
         <strong>{service.title}</strong>
       </h2>
-      <p>{service.details}</p>
-      <p>
-        <strong>Duration:</strong> {service.duration}
-      </p>
-      <p>
-        <strong>Causes:</strong> {service.causes}
-      </p>
-      <p>
-        <strong>Why it's needed:</strong> {service.why}
-      </p>
-      <p>
-        <strong>Treatment Process:</strong> {service.treatments}
-      </p>
-
-      <p>
-        <strong>Cost:</strong> {service.price}
-      </p>
-
-      <button className="btn" onClick={() => navigate("/")}>
+      <div
+        style={{
+          background: "linear-gradient(120deg, #e3e6ff 0%, #f3e8ff 100%)",
+          borderRadius: "18px",
+          boxShadow: "0 4px 24px rgba(100,125,222,0.13)",
+          padding: "32px 28px",
+          margin: "32px",
+          color: "#2c5aa0",
+          fontSize: "1.13rem",
+          lineHeight: "1.8",
+        }}
+      >
+        <p
+          style={{
+            marginBottom: "18px",
+            color: "#647dee",
+            fontWeight: "700",
+            fontSize: "1.15rem",
+            letterSpacing: "1px",
+          }}
+        >
+          {service.details}
+        </p>
+        <div style={{ marginBottom: "12px" }}>
+          <span
+            style={{
+              color: "#7f53ac",
+              fontWeight: "bold",
+              fontSize: "1.08rem",
+              display: "inline-block",
+              minWidth: "120px",
+            }}
+          >
+            Duration:
+          </span>
+          <span style={{ color: "#2c5aa0", fontWeight: "500" }}>
+            {service.duration}
+          </span>
+        </div>
+        <div style={{ marginBottom: "12px" }}>
+          <span
+            style={{
+              color: "#7f53ac",
+              fontWeight: "bold",
+              fontSize: "1.08rem",
+              display: "inline-block",
+              minWidth: "120px",
+            }}
+          >
+            Causes:
+          </span>
+          <span style={{ color: "#2c5aa0", fontWeight: "500" }}>
+            {service.causes}
+          </span>
+        </div>
+        <div style={{ marginBottom: "12px" }}>
+          <span
+            style={{
+              color: "#7f53ac",
+              fontWeight: "bold",
+              fontSize: "1.08rem",
+              display: "inline-block",
+              minWidth: "120px",
+            }}
+          >
+            Why it's needed:
+          </span>
+          <span style={{ color: "#2c5aa0", fontWeight: "500" }}>
+            {service.why}
+          </span>
+        </div>
+        <div style={{ marginBottom: "12px" }}>
+          <span
+            style={{
+              color: "#7f53ac",
+              fontWeight: "bold",
+              fontSize: "1.08rem",
+              display: "inline-block",
+              minWidth: "120px",
+            }}
+          >
+            Treatment Process:
+          </span>
+          <span style={{ color: "#2c5aa0", fontWeight: "500" }}>
+            {service.treatments}
+          </span>
+        </div>
+        <div
+          style={{
+            marginTop: "18px",
+            padding: "12px 0",
+            background: "linear-gradient(90deg, #7f53ac 0%, #647dee 100%)",
+            borderRadius: "10px",
+            textAlign: "center",
+            color: "#fff",
+            fontWeight: "bold",
+            fontSize: "1.18rem",
+            boxShadow: "0 2px 8px rgba(100,125,222,0.15)",
+          }}
+        >
+          Cost:{" "}
+          <span
+            style={{ fontSize: "1.22rem", color: "#fff", fontWeight: "bold" }}
+          >
+            {service.price}
+          </span>
+        </div>
+      </div>
+      <button
+        className="btn"
+        onClick={() => navigate("/")}
+        style={{
+          background: "linear-gradient(90deg, #7f53ac 0%, #647dee 100%)",
+          color: "#fff",
+          borderRadius: "8px",
+          padding: "12px 28px",
+          fontWeight: "bold",
+          fontSize: "1.08rem",
+          boxShadow: "0 2px 8px rgba(100,125,222,0.18)",
+          border: "none",
+          cursor: "pointer",
+          margin: "0 auto",
+          display: "block",
+          letterSpacing: "1px",
+          marginTop: "8px",
+        }}
+      >
         ← Back to Home
       </button>
     </div>

@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background: rgb(19, 19, 73);
+  background: rgb(21, 21, 98);
   color: #fff;
   padding: 1rem;
   display: flex;
@@ -14,7 +14,8 @@
 }
 .navbar .logo {
   font-weight: 700;
-  font-style: oblique;
+  font-family: cursive;
+  letter-spacing: 2px;
   font-size: 2rem;
   color: white;
   display: flex;
@@ -51,8 +52,10 @@
   cursor: pointer;
 }
 .container {
-  padding: 1rem;
-  margin: 0 auto;
+  /* padding: 1rem;
+  margin: 0 auto; */
+  margin: 0;
+  background: radial-gradient(midnightblue, transparent);
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -112,7 +115,7 @@ nav {
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #1e3d6f;
+  color: white;
 }
 
 .login-btn {
@@ -152,7 +155,6 @@ main {
   backdrop-filter: blur(10px);
   margin: 0;
   padding: 2rem;
-  border-radius: 20px;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }

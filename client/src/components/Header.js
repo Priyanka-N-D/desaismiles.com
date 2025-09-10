@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header({ user, logout }) {
   return (
     <nav className="navbar">
-      <h2 className="logo">Desai Dental Clinic</h2>
+      <h2 className="logo">Desai Smiles</h2>
       <ul className="nav-links">
         <li>
           <Link to="/">Home</Link>
