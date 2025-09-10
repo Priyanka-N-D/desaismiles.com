@@ -1,0 +1,150 @@
+/* Main Footer Styles */
+.footer {
+  background-color: lavender;
+  padding: 30px;
+  font-family: cursive;
+  box-shadow: 0 -2px 12px rgba(44, 90, 160, 0.08);
+  margin-top: 48px;
+}
+
+/* Container Layout */
+.footer-container {
+  max-width: -webkit-fill-available;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Clinic Info Section */
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1 1 300px;
+}
+
+.footer-logo {
+  border-radius: 100px;
+  background: #fff;
+  object-fit: contain;
+}
+
+.footer-title {
+  font-weight: 900;
+  font-size: 1.35rem;
+  color: #7f53ac;
+  letter-spacing: 2px;
+}
+
+.footer-address {
+  font-size: 1rem;
+  color: #647dee;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.footer-contact,
+.footer-email {
+  font-size: 0.98rem;
+  margin-top: 4px;
+}
+
+.footer-contact span,
+.footer-email span {
+  color: #2c5aa0;
+  font-weight: bold;
+}
+
+.footer-contact a,
+.footer-email a {
+  color: #7f53ac;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Quick Links Section */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+
+.footer-links a {
+  color: #2c5aa0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #7f53ac;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  text-align: center;
+  margin-top: 18px;
+  color: #7f53ac;
+  font-size: 0.98rem;
+  border-top: 1px solid #e3e6ff;
+  padding-top: 8px;
+}
+
+.footer-bottom a {
+  color: #647dee;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Responsive Design */
+
+/* Tablets & Smaller Screens */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-logo {
+    margin-bottom: 8px;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+  .footer {
+    padding: 24px 0 12px 0;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+  }
+
+  .footer-address {
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
+}

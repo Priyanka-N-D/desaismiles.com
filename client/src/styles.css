@@ -5,6 +5,9 @@
 }
 
 .navbar {
+  position: sticky; /* keeps it in view while scrolling */
+  top: 0;
+  z-index: 1000;
   background: rgb(21, 21, 98);
   color: #fff;
   padding: 1rem;
@@ -161,6 +164,7 @@ main {
 
 .hero h1 {
   font-size: 3rem;
+  font-family: math;
   color: #2c5aa0;
   margin-bottom: 1rem;
   animation: fadeInUp 1s ease;
@@ -168,7 +172,7 @@ main {
 
 .hero p {
   font-size: 1.2rem;
-  color: #666;
+  color: rgb(14, 14, 154);
   max-width: -webkit-fill-available;
   margin: 0 auto 2rem;
 }
@@ -183,7 +187,6 @@ main {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
 }
 
 .cta-button:hover {
@@ -579,4 +582,320 @@ textarea {
 
 .btn-submit:hover {
   background: #005fcc;
+}
+------------------------ .home-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Hero Container */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(120deg, #e3e6ff 0%, #f3e8ff 100%);
+  box-shadow: 0 4px 32px rgba(44, 90, 160, 0.1);
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+/* Left Section */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-title {
+  color: #2c5aa0;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #fff, 0 0 8px #b98fe4;
+  margin-bottom: 8px;
+}
+
+.hero-description {
+  color: #2c5aa0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.doctor-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7f53ac;
+}
+
+.doctor-qual {
+  color: #647dee;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Contact Card */
+.contact-card {
+  background: rgba(240, 245, 255, 0.85);
+  padding: 16px 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(44, 90, 160, 0.08);
+}
+
+.contact-row {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+  color: #647dee;
+}
+
+.contact-link,
+.email-link {
+  color: #2c5aa0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.info-box {
+  background: rgba(100, 125, 222, 0.09);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(100, 125, 222, 0.08);
+  font-weight: bold;
+  text-align: center;
+  color: #2c5aa0;
+}
+
+.highlight {
+  color: #647dee;
+}
+
+.closed {
+  color: #b98fe4;
+}
+
+.clinic-label {
+  color: #7f53ac;
+  font-size: 1.18rem;
+}
+
+.why-choose {
+  font-weight: bold;
+  font-size: 1.08rem;
+  color: #7f53ac;
+}
+
+.why-choose-text {
+  color: #2c5aa0;
+}
+
+.cta-banner {
+  display: block;
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 14px;
+  padding: 12px 28px;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  box-shadow: 0 4px 16px rgba(100, 125, 222, 0.18);
+}
+
+.cta-button {
+  margin-top: 12px;
+  background: none;
+  border: none;
+}
+
+.cta-link {
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Right Section */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.image-card {
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(44, 90, 160, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .hero-right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .image-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description,
+  .why-choose {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .cta-banner {
+    font-size: 1rem;
+  }
+
+  .hero-right {
+    flex-direction: column;
+  }
+}
+
+/* Services Section */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin: 24px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin: 48px 20px;
+}
+
+.service-card {
+  background: linear-gradient(120deg, #f3e8ff 0%, #e3e6ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(100, 125, 222, 0.1);
+  padding: 28px 18px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(100, 125, 222, 0.18);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.service-title {
+  color: #7f53ac;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.service-desc {
+  color: #2c5aa0;
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #7f53ac 0%, #647dee 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(100, 125, 222, 0.15);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin: 48px 20px;
+}
+
+.testimonial-card {
+  background: linear-gradient(120deg, #e3e6ff 0%, #f3e8ff 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(100, 125, 222, 0.1);
+  padding: 24px 18px;
+  text-align: center;
+}
+
+.testimonial-name {
+  color: #7f53ac;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.testimonial-treatment {
+  color: #647dee;
+  font-weight: bold;
+  font-size: 0.98rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.testimonial-opinion {
+  color: #2c5aa0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    margin-right: 0;
+  }
+
+  .hero-right {
+    margin-top: 20px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
 }
