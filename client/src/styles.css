@@ -17,7 +17,7 @@
 }
 .navbar .logo {
   font-weight: 700;
-  font-family: cursive;
+  font-family: ui-monospace;
   letter-spacing: 2px;
   font-size: 2rem;
   color: white;
