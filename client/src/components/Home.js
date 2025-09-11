@@ -70,6 +70,7 @@ export default function Home({ setActivePage }) {
     <div className="home-container">
       {/* Hero Section */}
       <div className="hero">
+        <img src="/smile.jpg" alt="Smiling Patient" className="hero-bg" />
         {/* Left Section */}
         <div className="hero-left">
           <h1 className="hero-title">Welcome to Desai Dental Clinic</h1>
@@ -147,19 +148,21 @@ export default function Home({ setActivePage }) {
           </div>
         </div>
       </div>
-
-      <h2 className="section-title">Our Treatments</h2>
-      <div className="services-grid">
-        {services.map((s) => (
-          <div key={s.key} className="service-card">
-            <span className="service-icon">{s.icon}</span>
-            <h3 className="service-title">{s.title}</h3>
-            <p className="service-desc">{s.desc}</p>
-            <Link to={`/services/${s.key}`} className="btn">
-              Show Details
-            </Link>
-          </div>
-        ))}
+      <div className="services-section">
+        <h2 className="section-title">Our Treatments</h2>
+        {/* <img src="/tooth.jpeg" alt="Clinic Interior" className="tooth-image" /> */}
+        <div className="services-grid">
+          {services.map((s) => (
+            <div key={s.key} className="service-card">
+              <span className="service-icon">{s.icon}</span>
+              <h3 className="service-title">{s.title}</h3>
+              <p className="service-desc">{s.desc}</p>
+              <Link to={`/services/${s.key}`} className="btn">
+                Show Details
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
 
       <h2 className="section-title">What Our Patients Say</h2>

@@ -598,7 +598,7 @@ textarea {
   padding: 2.5rem 1.5rem;
   background: linear-gradient(120deg, #e3e6ff 0%, #f3e8ff 100%);
   box-shadow: 0 4px 32px rgba(44, 90, 160, 0.1);
-  border-radius: 12px;
+
   margin-bottom: 32px;
 }
 
@@ -617,6 +617,35 @@ textarea {
   text-shadow: 0 2px 12px #fff, 0 0 8px #b98fe4;
   margin-bottom: 8px;
 }
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* makes it semi-transparent */
+  z-index: 0;
+  filter: blur(2px) brightness(0.9); /* makes it attractive */
+}
+.tooth-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* makes it semi-transparent */
+  z-index: 0;
+  filter: blur(2px) brightness(0.9); /* makes it attractive */
+}
+/* .services-section {
+  position: relative;
+  margin-top: 48px;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(120deg, #e3e6ff 0%, #f3e8ff 100%);
+  box-shadow: 0 4px 32px rgba(44, 90, 160, 0.1);
+} */
 
 .hero-description {
   color: #2c5aa0;
