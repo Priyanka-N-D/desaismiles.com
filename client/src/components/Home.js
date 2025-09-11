@@ -149,7 +149,7 @@ export default function Home({ setActivePage }) {
         </div>
       </div>
       <div className="services-section">
-        <h2 className="section-title">Our Treatments</h2>
+        <h2 className="section-title"> Our Treatments </h2>
         {/* <img src="/tooth.jpeg" alt="Clinic Interior" className="tooth-image" /> */}
         <div className="services-grid">
           {services.map((s) => (
